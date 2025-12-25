@@ -11,6 +11,7 @@
   "packageManager": "pnpm@9.0.0",
   "license": "MIT",
   "devDependencies": {
+    "prettier": "^3.4.2",
     "turbo": "^2.7.1"
   }
 }

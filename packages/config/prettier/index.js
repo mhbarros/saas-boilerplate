@@ -1,11 +1,11 @@
 /** @type {import('prettier').Config} */
 module.exports = {
   singleQuote: true,
-  trailingComma: "es5",
+  trailingComma: 'es5',
   tabWidth: 2,
   semi: false,
   printWidth: 120,
   useTabs: false,
   bracketSpacing: true,
   bracketSameLine: true,
-};
+}

@@ -12,7 +12,10 @@ import Joi from 'joi'
     SentryModule.forRoot(),
     ConfigModule.forRoot({
       isGlobal: true,
-      validationSchema: Joi.object({}),
+      validationSchema: Joi.object({
+        SENTRY_DSN: Joi.string().optional(),
+        NODE_ENV: Joi.string().optional(),
+      }),
     }),
     SwaggerModule,
   ],

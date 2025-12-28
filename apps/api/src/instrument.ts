@@ -1,7 +1,9 @@
 import * as Sentry from '@sentry/nestjs'
 
+const SENTRY_DSN = 'your-sentry-dsn'
+
 Sentry.init({
-  dsn: 'https://00082982eecf4199b5585b261a613ffb@o4509067240407040.ingest.us.sentry.io/4510608541286400',
+  dsn: SENTRY_DSN,
   // Setting this option to true will send default PII data to Sentry.
   // For example, automatic IP address collection on events
   sendDefaultPii: true,

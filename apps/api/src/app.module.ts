@@ -6,6 +6,7 @@ import { SwaggerModule } from '@nestjs/swagger'
 import { APP_FILTER } from '@nestjs/core'
 import { ConfigModule } from '@nestjs/config'
 import Joi from 'joi'
+import { DbModule } from './db/db.module'
 
 @Module({
   imports: [
@@ -13,11 +14,12 @@ import Joi from 'joi'
     ConfigModule.forRoot({
       isGlobal: true,
       validationSchema: Joi.object({
-        SENTRY_DSN: Joi.string().optional(),
+        SENTRY_DSN: Joi.string().optional().allow(''),
         NODE_ENV: Joi.string().optional(),
       }),
     }),
     SwaggerModule,
+    DbModule,
   ],
   controllers: [AppController],
   providers: [{ provide: APP_FILTER, useClass: SentryGlobalFilter }, AppService],

@@ -1,0 +1,16 @@
+services:
+  db:
+    image: postgres:18
+    container_name: boilerplate-postgres
+    environment:
+      POSTGRES_DB: boilerplate
+      POSTGRES_USER: mhbarros
+      POSTGRES_PASSWORD: 123123
+    ports:
+      - "5000:5432"
+    volumes:
+      - boilerplate_postgres:/var/lib/postgresql
+    restart: unless-stopped
+
+volumes:
+  boilerplate_postgres:

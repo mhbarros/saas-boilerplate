@@ -3,4 +3,7 @@
 .turbo/
 node_modules/
 
+# AI
+.claude/
+
 src/instrument.ts

@@ -6,4 +6,7 @@ node_modules/
 # AI
 .claude/
 
+# Docker
+docker/.env
+
 src/instrument.ts

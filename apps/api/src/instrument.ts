@@ -1,7 +1,13 @@
 import * as Sentry from '@sentry/nestjs'
 import packageJson from 'package.json'
+import { existsSync } from 'fs'
+import { join } from 'path'
 
-process.loadEnvFile()
+// Only load .env file if it exists (for local development)
+const envPath = join(process.cwd(), '.env')
+if (existsSync(envPath)) {
+  process.loadEnvFile()
+}
 
 Sentry.init({
   dsn: process.env.SENTRY_DSN,

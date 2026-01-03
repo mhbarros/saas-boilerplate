@@ -50,6 +50,7 @@ A production-ready, full-stack SaaS boilerplate built with modern technologies a
 ```bash
 git clone <your-repo-url>
 cd nestjs-boilerplate
+rm -rf .git
 ```
 
 2. Install dependencies:
